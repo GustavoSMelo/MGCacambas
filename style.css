@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+@font-face{
+	font-family: montserrat;
+	src: url(./src/assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face{
+	font-family: roboto;
+	src: url(./src/assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+@keyframes truckanimation {
+	from{
+		opacity: 0;
+		transform: translateX(-30%) scale(0.9);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0%) scale(1);
+	}
+}
+
+@keyframes titleAnimation{
+	from {
+		opacity: 0;
+		transform: translateX(30%) scale(0.9);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0%) scale(1);
+	}
+}
+
+@keyframes iconAnimation{
+	0%{
+		transform: translateX(0%);
+	}
+
+	50%{
+		transform: translateX(30%);
+	}
+
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	background-color: #00000000;
+	font-family: montserrat;
+}
+
+header > figure {
+	padding-left: 15px;
+}
+
+header > nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+
+header > nav > a {
+	text-decoration: none;
+	color: #000;
+	font-size: 18pt;
+	margin: 15px;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: row;
+}
+
+.icon{
+	width: 80px;
+	height: 30px;
+}
+
+header > nav > button {
+	background-color: #3e1800;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	width: 160px;
+	margin-left: 40px;
+	padding: 30px;
+	cursor: pointer;
+	height: 100%;
+	font-size: 12pt;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+header > nav > button:hover{
+	transition: 0.5s;
+	background-color: #291000;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+main > figure{
+	width: 45%;
+	animation-name: truckanimation;
+	animation-duration: 1s;
+}
+
+main > figure > img {
+	width: 100%;
+}
+
+main > section {
+	background-color: #e0b28e;
+	width: 55%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main > section > * {
+	animation-name: titleAnimation;
+	animation-duration: 1s;
+}
+
+main > section > h1 {
+	font-size: 66pt;
+	color: #3e1800;
+	left: -10px;
+	font-family: roboto;
+	margin-top: 30px;
+}
+
+main > section > p {
+	margin-right: 30%;
+	margin-left: 13%;
+	font-size: 18pt;
+	text-align: justify;
+	border-left: solid 5px #3e1800;
+	padding-left: 10px;
+}
+
+main > section > button{
+	padding: 15px;
+	font-size: 18pt;
+	background-color: transparent;
+	border: solid 2px #3e1800;
+	border-radius: 5px;
+	margin-top: 50px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+main > section > button:hover{
+	transition: 0.5s;
+	background-color: #3e1800;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+main > section > button > .arrow{
+	width: 80px;
+	height: 20px;
+}
+
+.icon-color{
+	color: #3e1800;
+	width: 30px;
+	margin: 15px;
+	cursor: pointer;
+}
+
+.view-contact{
+	width: 100%;
+	background-color: #e0b28e;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	display: none;
+}
