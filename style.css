@@ -17,8 +17,36 @@
 	}
 	to{
 		opacity: 1;
-		transform: translateY(0%) scale(1);
+		transform: translateX(0%) scale(1);
 	}
+}
+
+@keyframes transactAnimation{
+  from{
+    width: 55%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes transactAnimationFadeOut{
+  from{
+    opacity: 1;
+    transform: translateX(0%);
+  }to{
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+}
+
+@keyframes transactShowOff{
+  from{
+    width: 45%;
+  }
+  to{
+    width: 0%;
+  }
 }
 
 @keyframes titleAnimation{
@@ -32,18 +60,15 @@
 	}
 }
 
-@keyframes iconAnimation{
-	0%{
-		transform: translateX(0%);
-	}
-
-	50%{
-		transform: translateX(30%);
-	}
-
-	100%{
-		transform: translateX(0%);
-	}
+@keyframes cardAnimationUp{
+  from{
+    opacity: 0;
+    transform: translateY(20%) scale(0.9);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
 }
 
 *{
@@ -108,6 +133,10 @@ header > nav > button:hover{
 	background-color: #291000;
 }
 
+header > button {
+  display: none;
+}
+
 main {
 	height: 100vh;
 	display: flex;
@@ -154,7 +183,8 @@ main > section > p {
 	font-size: 18pt;
 	text-align: justify;
 	border-left: solid 5px #3e1800;
-	padding-left: 10px;
+  padding-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main > section > button{
@@ -191,11 +221,116 @@ main > section > button > .arrow{
 	cursor: pointer;
 }
 
-.view-contact{
+.pushViewClass {
+  animation-name: transactAnimation;
+  animation-duration: 1s;
+  width: 55%;
+  background-color: #e0b28e;
+  overflow: hidden;
+}
+
+.pushViewClass > *{
+  animation-name: transactAnimationFadeOut;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+}
+
+.showOffFigureClass {
+  width: 40%;
+  animation-name: transactShowOff;
+  animation-duration: 1s;
+  overflow: hidden;
+}
+
+.showOffFigureClass > * {
+  animation-name: transactAnimationFadeOut;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+}
+
+#view-contact{
 	width: 100%;
 	background-color: #e0b28e;
 	height: 100vh;
 	position: absolute;
 	top: 0;
-	display: none;
+  display: none;
+}
+
+#view-contact > figure > img {
+  width: 40px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+#view-contact > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#view-contact > span > article {
+  display: flex;
+  width: 15%;
+  border: solid 3px #3e1800;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  color: #291000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation-name: cardAnimationUp;
+  animation-duration: 1s;
+}
+
+#view-contact > span > article:nth-child(2){
+  animation-name: cardAnimationUp;
+  animation-duration: 1s;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+}
+
+#view-contact > span > article:nth-child(3){
+  animation-name: cardAnimationUp;
+  animation-duration: 1s;
+  animation-delay: 450ms;
+  animation-fill-mode: backwards;
+}
+
+#view-contact > span > article > figure > img {
+  width: 60px;
+}
+
+#view-contact > span > article > h1{
+  color: #291000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 30px;
+}
+
+#view-contact > span > article > button{
+  background-color: #3e1800;
+  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 120px;
+  transition: 500ms;
+}
+
+#view-contact > span > article > button:hover{
+  background-color: #291000;
+  transition: 500ms;
+}
+
+@media screen and (max-width: 1245px){
+  header
 }
