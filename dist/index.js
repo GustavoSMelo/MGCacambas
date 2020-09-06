@@ -7,9 +7,6 @@ var viewContact = window.document.querySelector('#view-contact');
 var btnReturnBack = window.document.querySelector('#returnBack');
 var navbar = window.document.querySelector('#navbar');
 btnPush === null || btnPush === void 0 ? void 0 : btnPush.addEventListener('click', function () {
-    if (window.innerHeight <= 767) {
-        mainContainer.style.marginTop = '0px';
-    }
     mainSection === null || mainSection === void 0 ? void 0 : mainSection.classList.remove();
     mainSection === null || mainSection === void 0 ? void 0 : mainSection.classList.add('pushViewClass');
     navbar.style.display = 'none';
