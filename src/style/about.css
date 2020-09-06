@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+@font-face{
+	font-family: montserrat;
+	src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face{
+	font-family: roboto;
+	src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+@keyframes menuAnimationDown{
+  from{
+    opacity: 0;
+    transform: translateY(-20%) scale(0.9);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0%) scale(1);
+  }
+}
+
+@keyframes truckanimation {
+	from{
+		opacity: 0;
+		transform: translateX(-30%) scale(0.9);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0%) scale(1);
+	}
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	background-color: #e0b28e;
+  font-family: montserrat;
+  top: 0;
+  height: 75px;
+}
+
+header > figure {
+	padding-left: 15px;
+}
+
+header > nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+
+header > nav > a {
+	text-decoration: none;
+	color: #000;
+	font-size: 18pt;
+	margin: 15px;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: row;
+}
+
+.icon{
+	width: 80px;
+	height: 30px;
+}
+
+header > nav > button {
+	background-color: #3e1800;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	width: 160px;
+	margin-left: 40px;
+	padding: 30px;
+	cursor: pointer;
+	height: 100%;
+	font-size: 12pt;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+header > nav > button:hover{
+	transition: 0.5s;
+	background-color: #291000;
+}
+
+header > button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+header > button > img {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+#menu-list{
+  display: none;
+  flex-direction: column;
+  background-color: #3e1800;
+  width: 50%;
+  position: fixed;
+  border-radius: 5px;
+  right: 0;
+  top: 75px;
+  animation-name: menuAnimationDown;
+  animation-duration: 1s;
+  overflow: hidden;
+}
+
+#menu-list > *{
+  animation-fill-mode: backwards;
+}
+
+#menu-list > *:nth-child(1){
+  animation-name: truckanimation;
+  animation-duration: 1250ms;
+}
+
+#menu-list > *:nth-child(2){
+  animation-name: truckanimation;
+  animation-duration: 1250ms;
+  animation-delay: 150ms;
+}
+
+#menu-list > *:nth-child(3){
+  animation-name: truckanimation;
+  animation-duration: 1250ms;
+  animation-delay: 250ms;
+}
+
+#menu-list > li {
+  list-style-type: none;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom:15px;
+}
+
+#menu-list > li:nth-child(1){
+  margin-top: 15px;
+}
+
+#menu-list > li > a {
+  color: #fff;
+  text-decoration:none;
+  font-size: 16pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu-list > li > a > img {
+  width:30px;
+  margin-left: 20px;
+}
+
+#menu-list > li > button {
+  background-color: #fff;
+  border: none;
+  padding: 15px;
+  margin-left: 20px;
+  font-size: 16pt;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1245px){
+  header > nav {
+    display: none;
+  }
+
+  header > button{
+    display: flex;
+  }
+}
