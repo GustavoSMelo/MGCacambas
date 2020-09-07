@@ -10,6 +10,11 @@
 	src: url(../assets/fonts/Montserrat-SemiBold.ttf);
 }
 
+@font-face{
+  font-family: ubuntu;
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+
 @keyframes menuAnimationDown{
   from{
     opacity: 0;
@@ -176,6 +181,51 @@ header > button > img {
   cursor: pointer;
 }
 
+main {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > h1 {
+  font-family: ubuntu;
+  font-size: 20pt;
+  width: 40%;
+  text-align: justify;
+  color: #3e1800;
+  line-height: 50px;
+  margin-bottom: 50px;
+}
+
+main > img {
+  width: 25%;
+  margin: 50px;
+}
+
+main > #localizationCompany {
+  width: 75%;
+  height: 500px;
+  margin-top: 30px;
+  margin-bottom: 130px;
+}
+
+footer{
+  background-color: #e0b28e;
+  color: #291000;
+  height: max-content;
+  padding: 30px;
+  font-family: roboto;
+  font-size: 16pt;
+  flex-direction: row;
+  text-align: center;
+}
+
+footer > small > a {
+  color: #291000;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1245px){
   header > nav {
     display: none;
@@ -183,5 +233,22 @@ header > button > img {
 
   header > button{
     display: flex;
+  }
+
+  main > img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 970px){
+  main > h1 {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  main > h1 {
+    width: 75%;
+    font-size:16pt ;
   }
 }
