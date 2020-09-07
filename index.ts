@@ -17,6 +17,10 @@ btnPush?.addEventListener('click', () => {
     viewContact.style.display = 'flex'
     viewContact.style.flexDirection = 'column'
   }, 1000)
+
+  if (window.innerWidth <= 766) {
+    window.document.body.style.backgroundColor = '#e0b28e'
+  }
 })
 
 btnReturnBack?.addEventListener('click', () => {
@@ -25,4 +29,5 @@ btnReturnBack?.addEventListener('click', () => {
   mainSection?.className = ''
   mainFigure?.className = ''
   navbar.style.display = 'flex'
+  window.document.body.style.backgroundColor = '#fff'
 })
