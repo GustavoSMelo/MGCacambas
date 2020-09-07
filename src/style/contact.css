@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+@font-face{
+	font-family: montserrat;
+	src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face{
+	font-family: roboto;
+	src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face{
+  font-family: ubuntu;
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+
+@keyframes menuAnimationDown{
+  from{
+    opacity: 0;
+    transform: translateY(-20%) scale(0.9);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0%) scale(1);
+  }
+}
+
+@keyframes truckanimation {
+	from{
+		opacity: 0;
+		transform: translateX(-30%) scale(0.9);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0%) scale(1);
+	}
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+  background-color: #e0b28e;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	background-color: #e0b28e;
+  font-family: montserrat;
+  top: 0;
+  height: 75px;
+}
+
+header > figure {
+	padding-left: 15px;
+}
+
+header > nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+
+header > nav > a {
+	text-decoration: none;
+	color: #000;
+	font-size: 18pt;
+	margin: 15px;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: row;
+}
+
+.icon{
+	width: 80px;
+	height: 30px;
+}
+
+header > nav > button {
+	background-color: #3e1800;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	width: 160px;
+	margin-left: 40px;
+	padding: 30px;
+	cursor: pointer;
+	height: 100%;
+	font-size: 12pt;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+header > nav > button:hover{
+	transition: 0.5s;
+	background-color: #291000;
+}
+
+header > button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+header > button > img {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+#menu-list{
+  display: none;
+  flex-direction: column;
+  background-color: #3e1800;
+  width: 50%;
+  position: fixed;
+  border-radius: 5px;
+  right: 0;
+  top: 75px;
+  animation-name: menuAnimationDown;
+  animation-duration: 1s;
+  overflow: hidden;
+}
+
+#menu-list > *{
+  animation-fill-mode: backwards;
+}
+
+#menu-list > *:nth-child(1){
+  animation-name: truckanimation;
+  animation-duration: 1250ms;
+}
+
+#menu-list > *:nth-child(2){
+  animation-name: truckanimation;
+  animation-duration: 1250ms;
+  animation-delay: 150ms;
+}
+
+#menu-list > *:nth-child(3){
+  animation-name: truckanimation;
+  animation-duration: 1250ms;
+  animation-delay: 250ms;
+}
+
+#menu-list > li {
+  list-style-type: none;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom:15px;
+}
+
+#menu-list > li:nth-child(1){
+  margin-top: 15px;
+}
+
+#menu-list > li > a {
+  color: #fff;
+  text-decoration:none;
+  font-size: 16pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu-list > li > a > img {
+  width:30px;
+  margin-left: 20px;
+}
+
+main > h1{
+  font-size: xx-large;
+  font-family: roboto;
+  margin-top: 130px;
+  color: #3e1800;
+  text-align: center;
+}
+
+main > .ContainerCards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main > .ContainerCards > .Card{
+  border: #3e1800 solid 2px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+main > .ContainerCards > .Card > img{
+  width: 60px;
+  height: 60px;
+}
+
+main > .ContainerCards > .Card > h2{
+  font-size: 18pt;
+  color: #3e1800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin: 15px;
+}
+
+main > .ContainerCards > .Card > button{
+  background-color: transparent;
+  border: #3e1800 solid 2px;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14pt;
+  color: #3e1800;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: montserrat;
+  font-weight: bold;
+  transition: 500ms;
+}
+
+main > .ContainerCards > .Card > button:hover{
+  background-color: #3e1800;
+  border: #e0b28e solid 2px;
+  transition: 500ms;
+  color: #fff;
+}
+
+@media screen and (max-width: 1245px){
+  header > nav {
+    display: none;
+  }
+
+  header > button{
+    display: flex;
+  }
+
+  main > .ContainerCards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 780px){
+  main > .ContainerCards{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
