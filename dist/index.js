@@ -1,6 +1,5 @@
 "use strict";
 var btnPush = window.document.querySelector('#btnPush');
-var mainContainer = window.document.querySelector('#MainContainer');
 var mainSection = window.document.querySelector('#main-section');
 var mainFigure = window.document.querySelector('#main-figure');
 var viewContact = window.document.querySelector('#view-contact');
@@ -16,10 +15,14 @@ btnPush === null || btnPush === void 0 ? void 0 : btnPush.addEventListener('clic
         viewContact.style.display = 'flex';
         viewContact.style.flexDirection = 'column';
     }, 1000);
+    if (window.innerWidth <= 766) {
+        window.document.body.style.backgroundColor = '#e0b28e';
+    }
 });
 btnReturnBack === null || btnReturnBack === void 0 ? void 0 : btnReturnBack.addEventListener('click', function () {
     viewContact.style.display = 'none';
     mainSection === null || mainSection === void 0 ? void 0 : mainSection.className = '';
     mainFigure === null || mainFigure === void 0 ? void 0 : mainFigure.className = '';
     navbar.style.display = 'flex';
+    window.document.body.style.backgroundColor = '#fff';
 });
