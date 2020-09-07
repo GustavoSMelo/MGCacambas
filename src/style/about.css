@@ -101,6 +101,11 @@ header > nav > button:hover{
 	background-color: #291000;
 }
 
+header > nav > button > a{
+  text-decoration: none;
+  color: #fff;
+}
+
 header > button {
   display: none;
   background-color: transparent;
@@ -181,6 +186,11 @@ header > button > img {
   cursor: pointer;
 }
 
+#menu-list > li > button > a{
+  text-decoration: none;
+  color: #000;
+}
+
 main {
   margin-top: 120px;
   display: flex;
@@ -201,6 +211,7 @@ main > h1 {
 main > img {
   width: 25%;
   margin: 50px;
+  margin-bottom: 110px;
 }
 
 main > #localizationCompany {
