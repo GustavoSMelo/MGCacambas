@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MG Caçambas - Sobre nós</title>
   <link rel="stylesheet" type="text/css" href="../style/about.css" />
+  <link rel="stylesheet" type="text/css" href="../components/map/leaflet.css" />
 </head>
 
 <body>
@@ -15,29 +16,46 @@
     </figure>
 
     <nav>
-      <a href="/"><img class="icon" src="../assets/img/icons/manifesto.svg" alt="Icon button" />Nosso objetivo</a>
-      <a href="/"><img class="icon" src="../assets/img/icons/weareus.svg" alt="Icon peoples" /> Sobre nos</a>
+      <a href="./objective.html"><img class="icon" src="../assets/img/icons/manifesto.svg" alt="Icon button" />Nosso
+        objetivo</a>
+      <a href="/"><img class="icon" src="../assets/img/icons/home.svg" alt="Icon peoples" /> Principal</a>
       <button type='button'>Contate-nos</button>
     </nav>
     <button id="hamburgerMenu" type='button'><img src="../assets/img/icons/menu.png" alt="menu hamburger" /></button>
   </header>
   <ul id="menu-list">
     <li>
-      <a href="./src/views/objective.html"><img src="../assets/img/icons/manifesto-white.png" alt="Icon button" />Nosso
+      <a href="./objective.html"><img src="../assets/img/icons/manifesto-white.png" alt="Icon button" />Nosso
         objetivo</a>
     </li>
     <li>
-      <a href="./src/views/about-us.html"><img src="../assets/img/icons/weareus-white.png" alt="Icon peoples" />
-        Sobre nos</a>
+      <a href="/"><img src="../assets/img/icons/home-white.png" alt="Icon peoples" />
+        Principal</a>
     </li>
     <li>
       <button type='button'>Contate-nos</button>
     </li>
   </ul>
   <main>
-    <h1>A mg caçambas é uma empresa vindo de um ambito familiar</h1>
+    <h1>
+      Somos uma empresa localizada na vila leste de São Paulo, Curuça.
+      Porem trabalhamos em toda grande São Paulo.
+      <br />Entre em contato conosco para saber trabalhamos em sua
+      localização.<br />
+    </h1>
+    <img src="../assets/img/thinkinnatureii.svg" />
+    <h1>Veja abaixo a localização de nossa empresa</h1>
+    <map id="localizationCompany"></map>
   </main>
+
+  <footer>
+    <small><a href="https://github.com/GustavoSMelo">Website developed by S. Melo, Gustavo <img class="icon"
+          src="../assets/img/icons/github.svg" /></a></small>
+  </footer>
+
   <script type="text/javascript" src="../js/menu.js"></script>
+  <script type="text/javascript" src="../components/map/leaflet.js"></script>
+  <script type="text/javascript" src="../js/map.js"></script>
 </body>
 
 </html>
