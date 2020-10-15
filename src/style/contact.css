@@ -43,7 +43,7 @@
 }
 
 body{
-  background-color: #e0b28e;
+  background-color: #D68420;
 }
 
 header {
@@ -53,7 +53,7 @@ header {
 	position: fixed;
 	width: 100%;
 	align-items: center;
-	background-color: #e0b28e;
+	background-color: #D68420;
   font-family: montserrat;
   top: 0;
   height: 75px;
@@ -86,7 +86,7 @@ header > nav > a {
 }
 
 header > nav > button {
-	background-color: #3e1800;
+	background-color: #000;
 	color: #fff;
 	font-weight: bold;
 	border: none;
@@ -102,7 +102,7 @@ header > nav > button {
 
 header > nav > button:hover{
 	transition: 0.5s;
-	background-color: #291000;
+	background-color: #000;
 }
 
 header > button {
@@ -121,7 +121,7 @@ header > button > img {
 #menu-list{
   display: none;
   flex-direction: column;
-  background-color: #3e1800;
+  background-color: #000;
   width: 50%;
   position: fixed;
   border-radius: 5px;
@@ -180,7 +180,7 @@ main > h1{
   font-size: xx-large;
   font-family: roboto;
   margin-top: 130px;
-  color: #3e1800;
+  color: #000;
   text-align: center;
 }
 
@@ -190,7 +190,7 @@ main > .ContainerCards{
 }
 
 main > .ContainerCards > .Card{
-  border: #3e1800 solid 2px;
+  border: #000 solid 2px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@ main > .ContainerCards > .Card > img{
 
 main > .ContainerCards > .Card > h2{
   font-size: 18pt;
-  color: #3e1800;
+  color: #000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   margin: 15px;
@@ -214,14 +214,14 @@ main > .ContainerCards > .Card > h2{
 
 main > .ContainerCards > .Card > button{
   background-color: transparent;
-  border: #3e1800 solid 2px;
+  border: #000 solid 2px;
   border-radius: 5px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 14pt;
-  color: #3e1800;
+  color: #000;
   cursor: pointer;
   margin-top: 50px;
   margin-bottom: 10px;
@@ -231,8 +231,8 @@ main > .ContainerCards > .Card > button{
 }
 
 main > .ContainerCards > .Card > button:hover{
-  background-color: #3e1800;
-  border: #e0b28e solid 2px;
+  background-color: #000;
+  border: #D68420 solid 2px;
   transition: 500ms;
   color: #fff;
 }

@@ -13,7 +13,6 @@ github: https://github.com/GustavoSMelo -->
 <body>
   <header id="navbar">
     <figure>
-      <h1>Logo</h1>
     </figure>
 
     <nav>
@@ -21,9 +20,9 @@ github: https://github.com/GustavoSMelo -->
           alt="Icon button" />Nosso objetivo</a>
       <a href="./src/views/about-us.html"><img class="icon" src="./src/assets/img/icons/weareus.svg"
           alt="Icon peoples" /> Sobre nos</a>
-      <button type='button'><a href="./src/views/contact.html">Contate-nos</a></button>
+      <span type='button'><a href="./src/views/contact.html">Contate-nos</a></span>
     </nav>
-    <button id="hamburgerMenu" type='button'><img src="./src/assets/img/icons/menu.png" alt="menu hamburger" /></button>
+    <button id="hamburgerMenu" type='button'><img src="./src/assets/img/icons/menu.svg" alt="menu hamburger" /></button>
   </header>
 
   <ul id="menu-list">
@@ -59,40 +58,43 @@ github: https://github.com/GustavoSMelo -->
       </button>
 
       <figure class="social networks">
-        <img class="icon-color" src="./src/assets/img/icons/facebook-brown-ii.png" alt="facebook" />
-        <img class="icon-color" src="./src/assets/img/icons/instagram-brown.png" alt="instagram" />
-        <img class="icon-color" src="./src/assets/img/icons/whatsapp-brown.png" alt="whatsapp" />
+        <img id='email' class="icon-color" src="./src/assets/img/icons/email.svg" alt="email" />
+        <img id='insta' class="icon-color" src="./src/assets/img/icons/instagram.svg" alt="instagram" />
+        <img id='wpp' class="icon-color" src="./src/assets/img/icons/whatsapp.svg" alt="whatsapp" />
       </figure>
     </section>
   </main>
   <section id="view-contact">
     <figure id="returnBack">
-      <img src="./src/assets/img/icons/left-arrow-brown.png" />
+      <img src="./src/assets/img/icons/left-arrow.svg" />
     </figure>
     <span>
       <article>
         <figure>
-          <img src="./src/assets/img/icons/facebook-brown.png" alt="facebook" />
+          <img src="./src/assets/img/icons/instagram.svg" alt="instagram" />
         </figure>
-        <h1>MG Caçambas</h1>
+        <h1>mg_caçambas</h1>
 
-        <button type="button">Acessar</button>
+        <button type="button" id='instagram'>Acessar</button>
       </article>
       <article>
         <figure>
-          <img src="./src/assets/img/icons/instagram-brown.png" alt="instagram" />
+          <img src="./src/assets/img/icons/email.svg" alt="email" />
         </figure>
-        <h1>MG Caçambas</h1>
+        <h1>mg_caçambas@hotmail.com</h1>
 
-        <button type="button">Acessar</button>
+        <button type="button" id='mail'>Acessar</button>
       </article>
       <article>
         <figure>
-          <img src="./src/assets/img/icons/whatsapp-brown.png" alt="whatsapp" />
+          <img src="./src/assets/img/icons/whatsapp.svg" alt="whatsapp" />
         </figure>
-        <h1>MG Caçambas</h1>
+        <h1>
+          MG Caçambas <br/>
+          11 97670-8937
+        </h1>
 
-        <button type="button">Acessar</button>
+        <button type="button" id='whatsapp'>Acessar</button>
       </article>
     </span>
   </section>
